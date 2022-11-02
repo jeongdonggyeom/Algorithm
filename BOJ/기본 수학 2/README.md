@@ -6,7 +6,7 @@
 > ##### ![Sieve_of_Eratosthenes_animation](https://user-images.githubusercontent.com/80656788/187200047-1608378c-1d76-4d96-928d-21ebdffeae2c.gif)
 
 > ##### 아래는 c++로 구현한 에라토스테네스 알고리즘이다.
-```
+```c++
 int arr[1000];
 
 void Eratos(int n)
