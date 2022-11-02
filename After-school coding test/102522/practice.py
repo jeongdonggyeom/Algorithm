@@ -93,23 +93,100 @@
 
 
 # 9
+# import sys
+# a = int(sys.stdin.readline().rstrip())
+
+# def func(n):
+#     list = []
+#     for i in range(1, int(n**(1/2)) + 1):
+#         if (n % i == 0):
+#             list.append(i) 
+#             if ( (i**2) != n) : 
+#                 list.append(n // i)
+#     return list 
+
+# for i in range(1, a+1):
+#     if(i==1):
+#         print(1, end=" ")
+#     else:
+#         print(len(func(i)), end=" ")
+
+
+# 10
+# import sys
+# a = int(sys.stdin.readline().rstrip())
+# l = list(map(str, sys.stdin.readline().split()))
+# l2 = []
+
+# for i in l:
+#     sum = 0
+#     for j in i:
+#         sum = sum + int(j)
+#     l2.append(sum)
+#     sum=0
+
+# if(l2.count(max(l2)) >= 2):
+#     maxi=0
+#     for i in range(0, l2.count(max(l2))):
+#         if(maxi < int(l[l2.index(max(l2))])):
+#             maxi = int(l[l2.index(max(l2))])
+#         l2[l2.index(max(l2))] = 0
+#     print(maxi)
+# else: 
+#     print(l[l2.index(max(l2))])
+
+
+# 11
+# import sys
+# a = int(sys.stdin.readline().rstrip())
+# result = 0
+# for i in range(1, a+1):
+#     if(i<10): 
+#         result+=1
+#     elif(i<100): 
+#         result+=2
+#     elif(i<1000): 
+#         result+=3    
+#     elif(i<10000): 
+#         result+=4
+#     elif(i<100000): 
+#         result+=5
+# print(result)
+
+
+# 12
+# import sys
+# a = int(sys.stdin.readline().rstrip())
+# result = 0
+# for i in range(1, a+1):
+#     if(i<10): 
+#         result+=1
+#     elif(i<100): 
+#         result+=2
+#     elif(i<1000): 
+#         result+=3    
+#     elif(i<10000): 
+#         result+=4
+#     elif(i<100000): 
+#         result+=5
+#     elif(i<1000000): 
+#         result+=6
+#     elif(i<10000000): 
+#         result+=7
+#     elif(i<100000000): 
+#         result+=8
+#     elif(i==100000000): 
+#         result+=9
+
+# print(result)
+
+
+# 13
 import sys
-a = int(sys.stdin.readline().rstrip())
+a = sys.stdin.readline().rstrip()
+l = [0 for i in range(len(a))]
 
-def func(n):
-    list = []
-    for i in range(1, int(n**(1/2)) + 1):
-        if (n % i == 0):
-            list.append(i) 
-            if ( (i**2) != n) : 
-                list.append(n // i)
+for i in a:
+    l[int(i)]+=1
 
-    list.sort()
-    
-    return list 
-
-for i in range(1, a+1):
-    if(i==1):
-        print(1, end=" ")
-    else:
-        print(len(func(i)), end=" ")
+print(max(l))
