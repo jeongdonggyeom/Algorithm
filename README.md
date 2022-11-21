@@ -6,3 +6,4 @@
 
 ### 정렬
 #### 1. [병합 정렬](https://github.com/jeongdonggyeom/Algorithm/blob/master/BOJ/%EC%A0%95%EB%A0%AC/merge.md)
+
