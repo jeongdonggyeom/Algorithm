@@ -6,7 +6,7 @@ import sys
 a = int(sys.stdin.readline().rstrip())
 li = []
 
-for i in range(0, a):
+for i in range(a):
     b = int(sys.stdin.readline().rstrip())
     li.append(b)
 
@@ -17,7 +17,6 @@ for i in range(2, max(li)+1):
         prime[j] = 0
 
 sosu = [i for i in range(2, len(prime)) if prime[i]==1]
-sosu.sort(reverse=True)
 
 for i in li:
     li2 = [0, 0]
