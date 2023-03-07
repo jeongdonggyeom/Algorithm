@@ -1,37 +1,12 @@
 import sys
-a = int(sys.stdin.readline().rstrip())
-arr = []
-for _ in range(a):
-    b = int(sys.stdin.readline().rstrip())
-    arr.append(b)
 
-def sort(low, high):
-    if high - low < 2:
-        return
-    mid = (low + high) // 2
-    sort(low, mid)
-    sort(mid, high)
-    merge(low, mid, high)
+n = int(sys.stdin.readline())
+arr = [0] * 10001
 
-def merge(low, mid, high):
-    temp = []
-    l, h = low, mid
-    while l < mid and h < high:
-        if arr[l] < arr[h]:
-            temp.append(arr[l])
-            l += 1
-        else:
-            temp.append(arr[h])
-            h += 1
-        while l < mid:
-            temp.append(arr[l])
-            l += 1
-        while h < high:
-            temp.append(arr[h])
-            h += 1
+for _ in range(n):
+    arr[int(sys.stdin.readline())] += 1
 
-        for i in range(low, high):
-            arr[i] = temp[i - low]
-
-sort(0, len(arr))
-print(arr)
+for i in range(10001):
+    if arr[i] != 0:
+        for j in range(arr[i]):
+            print(i)
