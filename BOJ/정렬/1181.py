@@ -1,10 +1,11 @@
 n = int(input())
 li = []
-save = []
 
-for i in range(n):
-    b = input()
-    li.append(b)
-    save.append((i, b))
+for _ in range(n):
+    li.append(input())
 
-print(sorted(save))
+li = sorted(list(set(li)))
+li.sort(key=len)
+
+for i in li:
+    print(i)
