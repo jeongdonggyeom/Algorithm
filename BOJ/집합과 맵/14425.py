@@ -2,19 +2,14 @@ import sys
 input = sys.stdin.readline
 
 a, b = map(int, input().split())
-key = []
-li = []
+key = {}
 cnt = 0
 
-for _ in range(a):
-    key.append(input())
+for i in range(a):
+    key[i] = input()
 
-for _ in range(b):
-    li.append(input())
+for i in range(b):
+    k = input()
+    if 
 
-for i in li:
-    for j in key:
-        if j in i:
-            cnt += 1
-
-print(cnt)
+# 다 못품
