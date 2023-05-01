@@ -2,14 +2,15 @@ import sys
 input = sys.stdin.readline
 
 a, b = map(int, input().split())
-key = {}
+key = set()
 cnt = 0
 
 for i in range(a):
-    key[i] = input()
+    key.add(input())
 
 for i in range(b):
     k = input()
-    if 
+    if k in key:
+        cnt += 1
 
-# 다 못품
+print(cnt)
