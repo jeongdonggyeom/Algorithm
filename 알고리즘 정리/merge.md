@@ -29,7 +29,7 @@ def merge_sort(arr):
     def sort(low, high):
         if high - low < 2:  # 만약 배열의 크기가 2 이하라면 작동 x
             return
-        mid = (low + high)  # 반으로 나누기 위한 중간값
+        mid = (low + high) // 2  # 반으로 나누기 위한 중간값
         sort(low, mid) # 원소가 하나가 남을 때 까지 쪼개기 위해 재귀호출
         sort(mid, high)
         merge(low, mid, high) # 쪼갠 배열을 정렬
